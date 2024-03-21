@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.comments {
+    position: fixed;
+    right: 0;
+}
+
+.editor {
+    display: grid;
+    grid-template-areas:
+    'editor-box'
+    'comments'
+}
+
+.editor > * {
+    padding: 1rem
+}
+
+.editor > .comments {
+    grid-area: comments;
+    background: rgb(204, 204, 204);
+}
+
+/* @media (min-width: 768px){
+    .editor{
+    
+        grid-template-areas: 
+        'editor-box editor-box comments'
+        ;
+    }
+} */
